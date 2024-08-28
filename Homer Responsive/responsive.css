@@ -1,0 +1,49 @@
+.image-container {
+  background-image: url('homer.jpg');
+  position: absolute;
+  width: 625px;
+  height: 625px;
+  background-size: cover; /* Ensure the image covers the container */
+}
+
+@media only screen and (max-width: 600px) {
+  .image-container {
+    clip-path: inset(0 50% 50% 0); /* top-left */
+  }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 800px) {
+  .image-container {
+    clip-path: inset(0 0 50% 50%); /* top-right */
+  }
+}
+
+@media only screen and (min-width: 801px) and (max-width: 1000px) {
+  .image-container {
+    clip-path: inset(50% 50% 0 0); /* bottom-left */
+  }
+}
+
+@media only screen and (min-width: 1001px) and (max-width: 1200px) {
+  .image-container {
+    clip-path: inset(50% 0 0 50%); /* bottom-right */
+  }
+}
+
+@media only screen and (min-width: 1201px) and (max-width: 1400px) {
+  .image-container {
+    clip-path: inset(50% 50% 0 0); /* bottom-left */
+  }
+}
+
+@media only screen and (min-width: 1401px) and (max-width: 1600px) {
+  .image-container {
+    clip-path: inset(0 0 50% 50%); /* top-right */
+  }
+}
+
+@media only screen and (min-width: 1601px) {
+  .image-container {
+    clip-path: inset(0 50% 50% 0); /* top-left */
+  }
+}
